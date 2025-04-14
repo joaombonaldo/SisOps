@@ -80,7 +80,7 @@ public class CPU {
             return processPage.get(0).pageStart;
         }
 
-        return processPage.get(pc/8).pageStart + pc;
+        return processPage.get(pc/8).pageStart + pc%8;
     }
 
     public void run() {                               // execucao da CPU supoe que o contexto da CPU, vide acima, 
